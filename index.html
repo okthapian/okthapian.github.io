@@ -51,7 +51,7 @@
 				
 				  </a>
 			      </div>
-			      <div class="flex lg:hidden">
+			      <div class="btn-menu flex lg:hidden">
 				<button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
 				  <span class="sr-only">Open main menu</span>
 				  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -70,7 +70,7 @@
 			      </div>
 			    </nav>
 			    <!-- Mobile menu, show/hide based on menu open state. -->
-			    <div class="lg:hidden hidden" role="dialog" aria-modal="true">
+			    <div class="lg:hidden hidden v-menu" role="dialog" aria-modal="true">
 			      <!-- Background backdrop, show/hide based on slide-over state. -->
 			      <div class="fixed inset-0 z-50"></div>
 			      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
@@ -193,7 +193,7 @@
           </dt>
           <dd class="mt-2 pr-12" id="faq-0">
             <p class="text-base leading-7 text-gray-300">
-		    <ul class="list-inside list-disc">
+		    <ul class="list-inside list-disc text-gray-300">
 			    <li>2003-2004, kindergarten  : TK.Baiturrahman, Bulutengger Sekaran, Lamongan, East Java, Indonesia </li>
 			    <li>2004-2010, Elementary School  : SDN 1 Bulutengger,  Sekaran, Lamongan, East Java, Indonesia </li>
 			    <li>2010-2013, Junior High School  : SMPN 1 Maduran, Maduran, East Java, Indonesia </li>
@@ -203,7 +203,38 @@
             </p>
           </dd>
         </div>
+	
+	  <div class="pt-6">
+          <dt>
+            <!-- Expand/collapse question button -->
+            <button type="button" class="flex w-full items-start justify-between text-left text-white" aria-controls="faq-0" aria-expanded="false">
+              <span class="text-base font-semibold leading-7">What Programming Language, and what can Okthapian.I.Mohammad do?</span>
+              <span class="ml-6 flex h-7 items-center">
+                <!--
+                  Icon when question is collapsed.
 
+                  Item expanded: "hidden", Item collapsed: ""
+                -->
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                </svg>
+                <!--
+                  Icon when question is expanded.
+
+                  Item expanded: "", Item collapsed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                </svg>
+              </span>
+            </button>
+          </dt>
+          <dd class="mt-2 pr-12" id="faq-0">
+            <p class="text-base leading-7 text-gray-300">
+		I started my career as a programmer with the python programming language, then I started to enter the world of web programming, until now I can speak programming languages, Python, PHP, JS, Java, HTML, CSS, C#, C++, Golang, Kotlin, etc.
+            </p>
+          </dd>
+        </div>
         <!-- More questions... -->
       </dl>
     </div>
@@ -381,6 +412,13 @@
 </footer>
 
 </main>
-
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function(){
+		$('btn-menu').click(function(){
+			$('.v-menu').toggleClass('hidden');
+		})
+	})
+</script>
 </body>
 </html>
