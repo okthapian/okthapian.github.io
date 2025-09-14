@@ -150,30 +150,30 @@
             <div class="max-w-6xl mx-auto px-4 pt-20">
                 <div class="w-full sm:flex space-y-16 sm:space-y-0 justify-between items-center">
                     <div class="shrink-0 space-y-4 sm:max-w-sm lg:max-w-lg pb-10">
-                        <h1 class="text-we text-5xl font-extrabold">
+                        <h1 id="typing" class="text-we text-5xl font-extrabold">
                             Hello! I'm Iqbal <span class="text-c1-500">Okthapian</span>
                         </h1>
                         <p class="text-c0-100 text-lg">
                             I’m a Web Developer who loves turning ideas into interactive digital experiences.
                             Coding isn’t just my job—it’s my favorite way to create, learn, and have fun.
                         </p>
-                        <div class="flex">
+                        <div class="flex items-center">
                             <a href="https://wa.me/6285606279182" target="_blank"
                                 class="text-we font-semibold text-sm bg-c1-600 hover:bg-c1-500 px-4 py-2 rounded-md">
                                 Say Hello on WhatsApp
                             </a>
-                            <div class="cursor-pointer hover:text-c1-400 px-4 py-2 text-c1-500 font-semibold">
+                            <div data-email="iqbalokthapian18@gmail.com" class="btn-copy-email cursor-pointer hover:text-c1-400 px-4 py-2 text-c1-500 font-semibold">
                                 Copy Email
                             </div>
                         </div>
                     </div>
-                    <div class="ml-4 w-full flex justify-center  sm:justify-end relative overflow-hidden">
+                    <div class="ml-4 w-full flex justify-center  sm:justify-end relative ">
                         <div class="absolute top-0 left-16 md:left-1/2">
-                            <div class="w-16 h-16 rounded-full border-8 border-c1-500"></div>
-                            <div class="w-48 h-48 rounded-full border-8 border-c1-500 p-2">
-                                <div class="w-full h-full rounded-full bg-c1-600"></div>
+                            <div class="relative w-16 h-16 rounded-full border-8 border-c1-500 animate-bounce"></div>
+                            <div class="w-48 h-48 rounded-full border-8 border-c1-500 p-2 animate-pulse">
+                                <div class="animate-spin w-full h-full rounded-full bg-gradient-to-t from-c1-600 from-30% to-c1-800"></div>
                             </div>
-                            <div class="-mt-48 ml-48  w-8 h-8 rounded-full border-8 border-c1-500"></div>
+                            <div class="-mt-48 ml-48  w-8 h-8 rounded-full border-8 border-c1-500 animate-pulse"></div>
                         </div>
                         <img class="w-full md:w-3/5 lg:1/2 object-contain relative" src="img/hero-image.png">
                     </div>
@@ -199,6 +199,58 @@
             </div>
         </section>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    var $el = $("#typing");
+    
+    // Pisahkan bagian teks biasa dan bagian berwarna
+    var beforeText = "Hello! I'm Iqbal ";
+    var highlightText = "Okthapian";
+    
+    var i = 0;
+    var speed = 50;
+
+    function typeWriter() {
+        if (i <= beforeText.length) {
+            // Ketik teks biasa dulu
+            $el.text(beforeText.substring(0, i));
+        } else {
+            // Setelah selesai, ketik bagian berwarna
+            var j = i - beforeText.length;
+            $el.html(
+                beforeText + "<span class='text-c1-500'>" + highlightText.substring(0, j) + "</span>"
+            );
+        }
+        
+        if (i < beforeText.length + highlightText.length) {
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+
+    $(".btn-copy-email").click(function(){
+        var $btn = $(this);
+        var email = $btn.data("email");
+        var originalText = $btn.text();
+
+        // Copy ke clipboard
+        navigator.clipboard.writeText(email).then(() => {
+            // Ubah teks jadi "Copied!"
+            $btn.text("Copied!");
+            
+            // Balik lagi setelah 2 detik
+            setTimeout(() => {
+                $btn.text(originalText);
+            }, 2000);
+        });
+    });
+});
+</script>
+
 </body>
 
 </html>
