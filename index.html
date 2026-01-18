@@ -1,256 +1,486 @@
 <!DOCTYPE html>
 <html lang="id">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Iqbal Okthapian - Web Developer & Programmer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Portfolio of Iqbal Okthapian, a passionate Web Developer & Programmer who loves turning coffee into code and ideas into real projects." />
-
+    <meta
+      name="description"
+      content="Portfolio of Iqbal Okthapian, a passionate Web Developer & Programmer who loves turning coffee into code and ideas into real projects." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="index, follow" />
-
     <link href="https://okthapian.github.io" rel="canonical" />
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/yourgithubid?v=4" />
-
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://avatars.githubusercontent.com/u/yourgithubid?v=4" />
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Iqbal Okthapian" />
-    <meta property="og:title" content="Iqbal Okthapian - Web Developer & Programmer" />
-    <meta property="og:description"
-        content="Portfolio of Iqbal Okthapian, showcasing projects, skills, and experience in web development & programming." />
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/yourgithubid?v=4" />
+    <meta
+      property="og:title"
+      content="Iqbal Okthapian - Web Developer & Programmer" />
+    <meta
+      property="og:description"
+      content="Portfolio of Iqbal Okthapian, showcasing projects, skills, and experience in web development & programming." />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/yourgithubid?v=4" />
     <meta property="og:url" content="https://okthapian.github.io" />
-
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@your_twitter" />
-    <meta name="twitter:title" content="Iqbal Okthapian - Web Developer & Programmer" />
-    <meta name="twitter:description"
-        content="Portfolio of Iqbal Okthapian, showcasing projects, skills, and experience in web development & programming." />
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/yourgithubid?v=4" />
-
+    <meta
+      name="twitter:title"
+      content="Iqbal Okthapian - Web Developer & Programmer" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Iqbal Okthapian, showcasing projects, skills, and experience in web development & programming." />
+    <meta
+      name="twitter:image"
+      content="https://avatars.githubusercontent.com/u/yourgithubid?v=4" />
     <!-- Import Google Font 'Archivo' -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap"
+      rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-
     <script>
-        tailwind.config = {
-            darkMode: "class", // or 'media'
-            theme: {
-                display: ["group-hover"],
-                screens: {
-                    xs: "400px",
-                    // => @media (min-width:400px) { ... }
+      tailwind.config = {
+        darkMode: "class", // or 'media'
+        theme: {
+          display: ["group-hover"],
+          screens: {
+            xs: "400px",
+            // => @media (min-width:400px) { ... }
 
-                    sm: "640px",
-                    // => @media (min-width: 640px) { ... }
+            sm: "640px",
+            // => @media (min-width: 640px) { ... }
 
-                    md: "768px",
-                    // => @media (min-width: 768px) { ... }
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
 
-                    lg: "1024px",
-                    // => @media (min-width: 1024px) { ... }
+            lg: "1024px",
+            // => @media (min-width: 1024px) { ... }
 
-                    xl: "1280px",
-                    // => @media (min-width: 1280px) { ... }
+            xl: "1280px",
+            // => @media (min-width: 1280px) { ... }
 
-                    "2xl": "1536px",
-                    // => @media (min-width: 1536px) { ... }
-                },
-                extend: {
-                    fontFamily: {
-                        sans: ["Archivo"],
-                    },
-                },
-                colors: ({ colors }) => ({
-                    transparent: colors.transparent,
-                    bk: colors.black,
-                    we: colors.white,
-                    c0: colors.zinc,
-                    c1: colors.lime,
-                    c2: colors.yellow,
-                    c3: colors.blue,
-                    gn: colors.green,
-                    oe: colors.orange,
-                }),
+            "2xl": "1536px",
+            // => @media (min-width: 1536px) { ... }
+          },
+          extend: {
+            fontFamily: {
+              sans: ["Archivo"],
             },
-        };
+          },
+          colors: ({colors}) => ({
+            transparent: colors.transparent,
+            bk: colors.black,
+            we: colors.white,
+            c0: colors.zinc,
+            c1: colors.emerald,
+            c2: colors.cyan,
+            c3: colors.c2,
+            gn: colors.green,
+            oe: colors.orange,
+          }),
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body class="bg-c0-900">
-    <header class="bg-c0-900 sticky top-0">
-        <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
-            <div class="w-full flex space-x-4 md:space-x-8">
-                <a href="https://okthapian.github.io"
-                    class="group flex items-center space-x-1 xs:space-x-2 text-we text-sm sm:text-md font-semibold">
-                    <span>
-                        <svg class="w-6 h-6 text-c0-100 group-hover:text-c1-500" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                            <!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path
-                                d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z" />
-                        </svg>
-                    </span>
-                    <span class="group-hover:text-c1-500">Home</span>
-                </a>
-                <a href="https://okthapian.github.io#about"
-                    class="group flex items-center space-x-1 xs:space-x-2 text-we text-sm sm:text-md font-semibold">
-                    <span>
-                        <svg class="w-6 h-6 text-c0-100 group-hover:text-c1-500" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                            <!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path
-                                d="M256.1 72C322.4 72 376.1 125.7 376.1 192C376.1 258.3 322.4 312 256.1 312C189.8 312 136.1 258.3 136.1 192C136.1 125.7 189.8 72 256.1 72zM226.4 368L285.8 368C292.5 368 299 368.4 305.5 369.1C304.6 374 304.1 379 304.1 384.1L304.1 476.2C304.1 501.7 314.2 526.1 332.2 544.1L364.1 576L77.8 576C61.4 576 48.1 562.7 48.1 546.3C48.1 447.8 127.9 368 226.4 368zM352.1 476.2L352.1 384.1C352.1 366.4 366.4 352.1 384.1 352.1L476.2 352.1C488.9 352.1 501.1 357.2 510.1 366.2L606.1 462.2C624.8 480.9 624.8 511.3 606.1 530.1L530 606.2C511.3 624.9 480.9 624.9 462.1 606.2L366.1 510.2C357.1 501.2 352 489 352 476.3zM456.1 432C456.1 418.7 445.4 408 432.1 408C418.8 408 408.1 418.7 408.1 432C408.1 445.3 418.8 456 432.1 456C445.4 456 456.1 445.3 456.1 432z" />
-                        </svg>
-                    </span>
-                    <span class=" group-hover:text-c1-500">About</span>
-                </a>
-                <a href="https://okthapian.github.io"
-                    class="group flex items-center space-x-1 xs:space-x-2 text-we text-sm sm:text-md font-semibold">
-                    <span>
-                        <svg class="w-6 h-6 text-c0-100 group-hover:text-c1-500" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path
-                                d="M64.1 128C64.1 92.7 92.8 64 128.1 64L277.6 64C294.6 64 310.9 70.7 322.9 82.7L429.3 189.3C441.3 201.3 448 217.6 448 234.6L448 332.1L316 464.1L273.9 464.1L257.8 410.5C253.1 394.8 238.7 384.1 222.3 384.1C211 384.1 200.4 389.2 193.4 398L133.3 473C125 483.3 126.7 498.5 137 506.7C147.3 514.9 162.5 513.3 170.7 502.9L217.8 444.1L233 494.8C236 505 245.4 511.9 256 511.9L287.5 511.9C286.6 515 285.8 518.2 285.2 521.4L274.3 575.9L128.1 575.9C92.8 575.9 64.1 547.2 64.1 511.9L64.1 127.9zM272.1 122.5L272.1 216C272.1 229.3 282.8 240 296.1 240L389.6 240L272.1 122.5zM332.3 530.9C334.8 518.5 340.9 507.1 349.8 498.2L468.7 379.3L548.7 459.3L429.8 578.2C420.9 587.1 409.5 593.2 397.1 595.7L337.5 607.6C336.6 607.8 335.6 607.9 334.6 607.9C326.6 607.9 320 601.4 320 593.3C320 592.3 320.1 591.4 320.3 590.4L332.2 530.8zM600.1 407.9L571.3 436.7L491.3 356.7L520.1 327.9C542.2 305.8 578 305.8 600.1 327.9C622.2 350 622.2 385.8 600.1 407.9z" />
-                        </svg>
-                    </span>
-                    <span class="hidden xs:flex group-hover:text-c1-500">Project</span>
-                </a>
-                <a href="https://okthapian.github.io"
-                    class="group hidden sm:flex items-center space-x-1 xs:space-x-2 text-we text-sm sm:text-md font-semibold">
-                    <span>
-                        <svg class="w-6 h-6 text-c0-100 group-hover:text-c1-500" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path
-                                d="M160 64C124.7 64 96 92.7 96 128L96 512C96 547.3 124.7 576 160 576L448 576C483.3 576 512 547.3 512 512L512 128C512 92.7 483.3 64 448 64L160 64zM272 352L336 352C380.2 352 416 387.8 416 432C416 440.8 408.8 448 400 448L208 448C199.2 448 192 440.8 192 432C192 387.8 227.8 352 272 352zM248 256C248 225.1 273.1 200 304 200C334.9 200 360 225.1 360 256C360 286.9 334.9 312 304 312C273.1 312 248 286.9 248 256zM576 144C576 135.2 568.8 128 560 128C551.2 128 544 135.2 544 144L544 208C544 216.8 551.2 224 560 224C568.8 224 576 216.8 576 208L576 144zM576 272C576 263.2 568.8 256 560 256C551.2 256 544 263.2 544 272L544 336C544 344.8 551.2 352 560 352C568.8 352 576 344.8 576 336L576 272zM560 384C551.2 384 544 391.2 544 400L544 464C544 472.8 551.2 480 560 480C568.8 480 576 472.8 576 464L576 400C576 391.2 568.8 384 560 384z" />
-                        </svg>
-                    </span>
-                    <span class="hidden sm:flex  group-hover:text-c1-500">Contact</span>
-                </a>
-            </div>
+  <body class="">
+    <nav id="navbar"></nav>
 
-            <div class="shrink-0">
-                <div class="bg-c1-500 text-sm font-semibold text-we px-4 py-1 rounded-md border-2 border-c1-700">
-                    Hire Me!
-                </div>
+    <main id="main">
+      <section
+        class="header relative pt-16 items-center flex h-screen max-h-[860px]">
+        <div class="container mx-auto items-center flex flex-wrap">
+          <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+            <div class="pt-16 sm:pt-0">
+              <div>
+                <span
+                  class="text-xs text-c1-600 bg-c1-100 border-c1-300 rounded-md px-2 py-0.5"
+                  >Okthadev</span
+                >
+              </div>
+              <h1
+                class="text-writing font-semibold text-4xl text-c0-600 pt-2"
+                data-text="Iqbal Okthapian - Web Developer & Problem Solver"></h1>
+
+              <p class="mt-4 text-lg leading-relaxed text-c0-500">
+                I build fast, well-structured, SEO-friendly, and scalable
+                websites — from landing pages to WordPress-based systems and
+                custom PHP (native or framework-based).
+              </p>
+              <div class="mt-12">
+                <a
+                  href="https://wa.me/6285606279182?text=Hi%20Iqbal,%20I%20want%20to%20hire%20you"
+                  target="_blank"
+                  class="get-started text-we font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-c1-500 active:bg-c1-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150">
+                  Contact Me!
+                </a>
+                <a
+                  href="https://github.com/okthapian?tab=repositories"
+                  class="github-star ml-1 text-we font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-c0-700 active:bg-c0-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                  target="_blank">
+                  Github Repo
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </header>
+        <img
+          class="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-[860px]"
+          src="img/img-backfrop.webp"
+          alt="backdrop" />
+      </section>
 
-    <main>
-        <section class="hero ">
-            <div class="max-w-6xl mx-auto px-4 pt-20">
-                <div class="w-full sm:flex space-y-16 sm:space-y-0 justify-between items-center">
-                    <div class="shrink-0 space-y-4 sm:max-w-sm lg:max-w-lg pb-10">
-                        <h1 id="typing" class="text-we text-5xl font-extrabold">
-                            Hello! I'm Iqbal <span class="text-c1-500">Okthapian</span>
-                        </h1>
-                        <p class="text-c0-100 text-lg">
-                            I’m a Web Developer who loves turning ideas into interactive digital experiences.
-                            Coding isn’t just my job—it’s my favorite way to create, learn, and have fun.
-                        </p>
-                        <div class="flex items-center">
-                            <a href="https://wa.me/6285606279182" target="_blank"
-                                class="text-we font-semibold text-sm bg-c1-600 hover:bg-c1-500 px-4 py-2 rounded-md">
-                                Say Hello on WhatsApp
-                            </a>
-                            <div data-email="iqbalokthapian18@gmail.com" class="btn-copy-email cursor-pointer hover:text-c1-400 px-4 py-2 text-c1-500 font-semibold">
-                                Copy Email
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-full flex justify-center  sm:justify-end relative ">
-                        <div class="absolute top-0 left-16 md:left-1/2">
-                            <div class="relative w-16 h-16 rounded-full border-8 border-c1-500 animate-bounce"></div>
-                            <div class="w-48 h-48 rounded-full border-8 border-c1-500 p-2 animate-pulse">
-                                <div class="animate-spin w-full h-full rounded-full bg-gradient-to-t from-c1-600 from-30% to-c1-800"></div>
-                            </div>
-                            <div class="-mt-48 ml-48  w-8 h-8 rounded-full border-8 border-c1-500 animate-pulse"></div>
-                        </div>
-                        <img class="w-full md:w-3/5 lg:1/2 object-contain relative" src="img/hero-image.png">
-                    </div>
-                </div>
+      <section class="mt-48 md:mt-40 relative bg-c0-100">
+        <div
+          class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+          style="transform: translateZ(0px)">
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0">
+            <polygon
+              class="text-c0-100"
+              fill="currentColor"
+              points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto">
+          <div class="flex flex-wrap items-center">
+            <div
+              class="w-full sm:w-8/12 md:w-6/12 lg:w-4/12 px-6 md:px-4 mr-auto ml-auto -mt-32">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-c1-500 w-full mb-6 shadow-lg rounded-lg">
+                <img
+                  alt="..."
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                  class="w-full align-middle rounded-t-lg" />
+                <blockquote class="relative p-8 mb-4">
+                  <svg
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 583 95"
+                    fill="currentColor"
+                    class="absolute left-0 w-full block h-[95px] -top-[94px]">
+                    <polygon
+                      points="-30,95 583,95 583,65"
+                      fill="currentColor"
+                      class="text-c1-500"></polygon>
+                  </svg>
+                  <h4 class="text-xl font-bold text-we">
+                    Built for Your Real Business Needs
+                  </h4>
+                  <p class="text-md font-light mt-2 text-we">
+                    I build custom, scalable pages that solve real
+                    problems—fast, efficient, and easy to maintain, with
+                    performance, SEO, and long-term growth in mind.
+                  </p>
+                </blockquote>
+              </div>
             </div>
-        </section>
-
-        <section class="about bg-we">
-            <div class="max-w-6xl mx-auto px-4 py-20">
-                <div class="space-y-2 max-w-lg">
-                    <div class="text-md text-c0-800 font-semibold">
-                        -  My Project
-                    </div>
-
-                    <div class="text-3xl font-bold text-c0-900">
-                        Lines of Code, <span class="text-c1-700">Stories</span> of Work
-                    </div>
-
-                    <div class="text-md text-c0-600">
-                        Behind each project lies not just code, but a journey of challenges, creativity, and the drive to build something meaningful.
-                    </div>
-                </div>
+            <div class="w-full md:w-6/12 md:px-4">
+              <div
+                class="why-me grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 px-4"></div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-20">
+        <div class="container mx-auto overflow-hidden pb-20 space-y-20">
+          <div class="flex flex-wrap items-center">
+            <div
+              class="w-full md:w-6/12 lg:w-4/12 px-6 md:px-4 ml-auto mr-auto">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/11932/11932339.png "
+                class="text-c0-500 p-1 text-center inline-flex items-center justify-center w-16 h-16 mb-6 bg-we" />
+
+              <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                Wordpress Themes & Plugins
+              </h3>
+              <p
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-c0-600">
+                I build custom WordPress themes and plugins using clean, manual
+                coding—not Elementor or page builders. The result is
+                lightweight, flexible, and scalable solutions with better
+                performance, security, and long-term maintainability.
+              </p>
+              <div class="block pb-6">
+                <span
+                  class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-c0-500 bg-we uppercase last:mr-0 mr-2 mt-2">
+                  Buttons </span
+                ><span
+                  class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-c0-500 bg-we uppercase last:mr-0 mr-2 mt-2">
+                  Inputs </span
+                ><span
+                  class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-c0-500 bg-we uppercase last:mr-0 mr-2 mt-2">
+                  Labels </span
+                ><span
+                  class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-c0-500 bg-we uppercase last:mr-0 mr-2 mt-2">
+                  Menus </span
+                ><span
+                  class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-c0-500 bg-we uppercase last:mr-0 mr-2 mt-2">
+                  Navbars </span
+                ><span
+                  class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-c0-500 bg-we uppercase last:mr-0 mr-2 mt-2">
+                  Pagination </span
+                ><span
+                  class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-c0-500 bg-we uppercase last:mr-0 mr-2 mt-2">
+                  Progressbars </span
+                ><span
+                  class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-c0-500 bg-we uppercase last:mr-0 mr-2 mt-2">
+                  Typography
+                </span>
+              </div>
+            </div>
+            <div class="w-full md:w-5/12 lg:w-5/12 px-4 mr-auto ml-auto mt-32">
+              <div
+                class="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
+                <img
+                  alt="..."
+                  src="https://demos.creative-tim.com/vue-notus/img/component-btn.4d129504.png"
+                  class="w-full align-middle rounded absolute shadow-lg max-w-[100px] left-[145px] -top-[29px] z-10" /><img
+                  alt="..."
+                  src="https://demos.creative-tim.com/vue-notus/img/component-profile-card.52a3ee76.png"
+                  class="w-full align-middle rounded-lg absolute shadow-lg max-w-[210px] left-[260px] -top-[160px] z-4" /><img
+                  alt="..."
+                  src="https://demos.creative-tim.com/vue-notus/img/component-info-card.d19a4464.png"
+                  class="w-full align-middle rounded-lg absolute shadow-lg max-w-[180px] left-[40px] -top-[225px] z-2" /><img
+                  alt="..."
+                  src="https://demos.creative-tim.com/vue-notus/img/component-info-2.5212a3a6.png"
+                  class="w-full align-middle rounded-lg absolute shadow-2xl max-w-[200px] -left-[50px] top-[25px]" /><img
+                  alt="..."
+                  src="https://demos.creative-tim.com/vue-notus/img/component-menu.418bd949.png"
+                  class="w-full align-middle rounded absolute shadow-lg max-w-[580px] -left-[20px] top-[210px]" /><img
+                  alt="..."
+                  src="https://demos.creative-tim.com/vue-notus/img/component-menu.418bd949.png"
+                  class="w-full align-middle rounded absolute shadow-xl max-w-[120px] left-[195px] top-[95px]" />
+              </div>
+            </div>
+          </div>
+          <div class="items-center flex flex-wrap pt-32">
+            <div class="w-full md:w-5/12 ml-auto px-12 md:px-4">
+              <div class="md:pr-12">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/11826/11826860.png"
+                  class="text-c0-500 p-1 text-center inline-flex items-center justify-center w-16 h-16 mb-6 bg-we" />
+
+                <h3 class="text-3xl font-semibold">PHP Native & Frameworks</h3>
+                <p class="mt-4 text-lg leading-relaxed text-c0-500">
+                  I develop robust applications using native PHP and modern
+                  frameworks, built with clean architecture and best practices.
+                  The result is secure, efficient, and scalable systems that are
+                  easy to maintain and ready to grow with your business.
+                </p>
+                <ul class="list-none mt-6">
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block px-2 uppercase rounded-full text-c0-500 bg-c0-50 mr-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6 text-c0-400">
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="">
+                        <h4 class="text-c0-500 leading-none">
+                          Clean Architecture & Best Practices
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block px-2 uppercase rounded-full text-c0-500 bg-c0-50 mr-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6 text-c0-400">
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="">
+                        <h4 class="text-c0-500 leading-none">
+                          Secure & High Performance
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block px-2 uppercase rounded-full text-c0-500 bg-c0-50 mr-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6 text-c0-400">
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="">
+                        <h4 class="text-c0-500 leading-none">
+                          Scalable & Business-Ready
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0 order-first">
+              <img
+                alt="..."
+                class="max-w-full rounded-lg shadow-xl"
+                style="transform: scale(1) perspective(1040px) rotateY(-11deg)"
+                src="https://demos.creative-tim.com/vue-notus/img/documentation.014ebef5.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-16">
+        <div class="justify-center text-center flex flex-wrap mt-24">
+          <div class="w-full md:w-6/12 px-12 md:px-4">
+            <h2 class="font-semibold text-4xl">Real Projects & Case Studies</h2>
+            <p class="text-lg leading-relaxed mt-4 mb-4 text-c0-500">
+              This section showcases real projects I’ve built for actual use
+              cases—ranging from landing pages to custom systems. Each project
+              is crafted with clean code, performance, and scalability in mind,
+              based on real business needs, not just design concepts.
+            </p>
+          </div>
+        </div>
+        <div class="block relative z-1">
+          <div class="container mx-auto">
+            <div class="justify-center flex flex-wrap">
+              <div class="w-full lg:w-12/12 px-4">
+                <div class="my-project flex flex-wrap"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-c0-600 overflow-hidden">
+        <div class="container mx-auto pb-64">
+          <div class="flex flex-wrap justify-center">
+            <div
+              class="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-16">
+              <img
+                src="   https://cdn-icons-png.flaticon.com/512/13474/13474434.png "
+                class="text-c0-500 p-1 text-center inline-flex items-center justify-center w-16 h-16 mb-6" />
+
+              <h3 class="text-3xl mb-2 font-semibold leading-normal text-we">
+                Open Source & Daily Coding
+              </h3>
+              <p
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-c0-400">
+                You can explore my GitHub to see real code from my daily
+                development work—open-source projects, experiments, and
+                real-world solutions. It reflects how I write code, structure
+                systems, and solve problems in practice.
+              </p>
+              <p
+                class="text-lg font-light leading-relaxed mt-0 mb-4 text-c0-400">
+                My GitHub shows my daily coding activities—from open-source
+                contributions to production-ready projects.
+              </p>
+              <a
+                href="#m/creativetimofficial/vue-notus?ref=vn-index"
+                target="_blank"
+                class="github-star mt-4 inline-block text-we font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-c0-700 active:bg-c0-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150">
+                Github Star
+              </a>
+            </div>
+            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative">
+              <svg xmlns="http://www.w3.org/2000/svg" fill= "currentColor"  class=" text-c0-700 size-[900px] absolute -top-[150px] -right-100 left-auto opacity-80" viewBox="0 0 512 512">
+                <path
+                  d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM252.8 8c-138.7 0-244.8 105.3-244.8 244 0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1 100-33.2 167.8-128.1 167.8-239 0-138.7-112.5-244-251.2-244zM105.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-16 bg-c0-200 relative pt-32">
+         <div class="container mx-auto bg-0-200">
+          <div
+            class="flex flex-wrap justify-center bg-we shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
+            <div class="w-full text-center lg:w-8/12">
+              <p class="text-4xl text-center">
+                <span role="img" aria-label="love"> 😍 </span>
+              </p>
+              <h3 class="font-semibold text-3xl">
+                Like What You See?
+              </h3>
+              <p class="text-c0-500 text-lg leading-relaxed mt-4 mb-4">
+                If you like this work and how I build projects, let’s turn your ideas into a real product. Hit the buttons below to explore my work or get in touch to start your project.
+              </p>
+              <div class="sm:block flex flex-col mt-10">
+                <a
+                  href="https://www.creative-tim.com/learning-lab/tailwind/vue/overview/notus?ref=vn-index"
+                  target="_blank"
+                  class="get-started text-we font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-c1-500 active:bg-c1-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150">
+                  Explore</a
+                ><a
+                  href="#m/creativetimofficial/vue-notus?ref=vn-index"
+                  target="_blank"
+                  class="github-star sm:ml-1 text-we font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-c0-700 active:bg-c0-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                  ><i class="fab fa-github text-lg mr-1"></i
+                  ><span>Contact Me!</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function(){
-    var $el = $("#typing");
     
-    // Pisahkan bagian teks biasa dan bagian berwarna
-    var beforeText = "Hello! I'm Iqbal ";
-    var highlightText = "Okthapian";
-    
-    var i = 0;
-    var speed = 50;
-
-    function typeWriter() {
-        if (i <= beforeText.length) {
-            // Ketik teks biasa dulu
-            $el.text(beforeText.substring(0, i));
-        } else {
-            // Setelah selesai, ketik bagian berwarna
-            var j = i - beforeText.length;
-            $el.html(
-                beforeText + "<span class='text-c1-500'>" + highlightText.substring(0, j) + "</span>"
-            );
-        }
-        
-        if (i < beforeText.length + highlightText.length) {
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-
-    typeWriter();
-
-    $(".btn-copy-email").click(function(){
-        var $btn = $(this);
-        var email = $btn.data("email");
-        var originalText = $btn.text();
-
-        // Copy ke clipboard
-        navigator.clipboard.writeText(email).then(() => {
-            // Ubah teks jadi "Copied!"
-            $btn.text("Copied!");
-            
-            // Balik lagi setelah 2 detik
-            setTimeout(() => {
-                $btn.text(originalText);
-            }, 2000);
-        });
-    });
-});
-</script>
-
-</body>
-
+    <footer id="footbar"></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
