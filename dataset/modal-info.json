@@ -1,0 +1,20 @@
+[
+    {
+        "id": "kebijakan-privasi",
+        "title": "Privacy Policy",
+        "subtitle": "Your privacy matters. Learn how we protect your data.",
+        "content": "components/content/kebijakan-privasi.html"
+    },
+    {
+        "id": "about",
+        "title": "About Me",
+        "subtitle": "Get to know more about who I am and how I build digital products.",
+        "content": "components/content/about.html"
+    },
+    {
+        "id": "term",
+        "title": "Terms & Conditions",
+        "subtitle": "Please read these terms carefully before using this website.",
+        "content": "components/content/term.html"
+    }
+]

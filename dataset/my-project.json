@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Wordpress Theme",
+        "link": "#/auth/login",
+        "image": "https://demos.creative-tim.com/vue-notus/img/login.9c1ecd37.jpg"
+    },
+    {
+        "title": "Profile Page",
+        "link": "#/profile",
+        "image": "https://demos.creative-tim.com/vue-notus/img/profile.c62f8a5b.jpg"
+    },
+    {
+        "title": "Landing Page",
+        "link": "#/landing",
+        "image": "https://demos.creative-tim.com/vue-notus/img/landing.8150f1b0.jpg"
+    }
+]

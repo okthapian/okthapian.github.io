@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>404 - Page Not Found | Iqbal Okthapian</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config (biar sama kayak website kamu) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              c0: {
+                400: "#a1a1aa",
+                600: "#52525b",
+                700: "#3f3f46",
+                800: "#27272a",
+                900: "#18181b"
+              },
+              c1: {
+                500: "#10b981"
+              }
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-c0-900 text-white flex items-center justify-center min-h-screen">
+
+    <div class="text-center px-6">
+
+      <!-- 404 -->
+      <h1 class="text-7xl md:text-9xl font-bold text-c1-500">
+        404
+      </h1>
+
+      <!-- Title -->
+      <h2 class="mt-4 text-2xl md:text-3xl font-semibold">
+        Page Not Found
+      </h2>
+
+      <!-- Description -->
+      <p class="mt-3 text-c0-400 max-w-md mx-auto">
+        The page you’re looking for doesn’t exist or has been moved.
+      </p>
+
+      <!-- Buttons -->
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+
+        <a href="/"
+          class="px-6 py-3 bg-c1-500 text-white rounded-lg shadow-lg hover:scale-105 transition">
+          ← Back to Home
+        </a>
+
+        <a href="/#projects"
+          class="px-6 py-3 border border-c0-600 rounded-lg hover:bg-c0-800 transition">
+          View Projects →
+        </a>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

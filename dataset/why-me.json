@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Solution-Oriented",
+    "icon": "https://cdn-icons-png.flaticon.com/512/2779/2779847.png",
+    "desc": "I don’t just write code—I solve business problems. Every feature is built with a clear purpose: fast, efficient, and scalable for the long term."
+  },
+  {
+    "title": "Custom Development",
+    "icon": "https://cdn-icons-png.flaticon.com/512/2888/2888407.png",
+    "desc": "I build custom solutions (WordPress, PHP, Tailwind, etc.) tailored to real needs—lighter, more secure, and easy to maintain."
+  },
+  {
+    "title": "Performance & Security",
+    "icon": "https://cdn-icons-png.flaticon.com/512/9132/9132336.png",
+    "desc": "Clean structure, optimized performance, SEO-ready, and security built in from day one."
+  },
+  {
+    "title": "Clear Communication",
+    "icon": "https://cdn-icons-png.flaticon.com/512/2600/2600350.png",
+    "desc": "Easy to work with, transparent progress, and committed until the project is truly ready."
+  }
+]
