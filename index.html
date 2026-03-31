@@ -402,6 +402,89 @@
         </div>
       </section>
 
+      <section id="blog">
+        <div class="max-w-7xl mx-auto p-6">
+          <div class="justify-center text-center flex flex-wrap mt-24">
+            <div class="w-full md:w-6/12 px-4">
+              <h2 class="font-semibold text-4xl">
+                Latest Articles & Dev Notes
+              </h2>
+              <p class="text-lg leading-relaxed mt-4 mb-4 text-c0-500">
+                I write about things I’m building, testing, and learning—mostly
+                around web development, UI, and tools. No overcomplicated
+                theory, just real experiences and practical insights from actual
+                projects.
+              </p>
+            </div>
+          </div>
+          <div
+            id="devto-posts"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+
+          <script>
+            fetch("https://dev.to/api/articles?username=okthapian")
+              .then((res) => res.json())
+              .then((data) => {
+                const container = document.getElementById("devto-posts");
+
+                data.slice(0, 4).forEach((post) => {
+                  const el = document.createElement("div");
+                  const date = new Date(post.edited_at);
+
+                  const formattedDate = date.toLocaleDateString("en-US", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric"
+                  });
+
+                  const tag = post.tag_list[0] || "general";
+
+                  el.className =
+                    "cursor-pointer group relative flex flex-col min-w-0 break-words bg-c1-500 hover:bg-c1-600 border border-we duration-300 shadow-md hover:border-c1-700 w-full mb-6 shadow-lg rounded-lg";
+
+                  el.innerHTML = `
+        ${
+          post.cover_image
+            ? `
+          <img 
+            src="${post.cover_image}" 
+            alt="${post.title}" 
+            class="w-full align-middle rounded-t-lg object-cover h-48"
+          >
+        `
+            : ""
+        }
+
+        <div class=" relative p-6 mb-2">
+          <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" fill="currentColor" class="absolute left-0 w-full block h-[95px] -top-[94px]">
+            <polygon points="-30,95 583,95 583,65" class="text-c1-500 group-hover:text-c1-600 duration-300"></polygon>
+          </svg>
+
+          <div class="flex items-center mb-1">
+              <span class="bg-c1-200 text-c1-600 px-2 py-0.5 rounded-full text-xs">${tag}</span>
+            </div>
+          <h4 class="text-lg font-bold text-c1-100 group-hover:text-we duration-300 leading-snug">
+            <a href="${post.url}" target="_blank" class="hover:underline">
+              ${post.title}
+              <span class="absolute inset-0"></span>
+            </a>
+          </h4>
+
+          <p class="text-sm font-light mt-2 text-we/80 line-clamp-3">
+            ${post.description || "No description available."}
+          </p>
+
+          <span class="text-xs font-semibold text-c1-200 pt-2">${formattedDate}</span>
+        </div>
+      `;
+
+                  container.appendChild(el);
+                });
+              });
+          </script>
+        </div>
+      </section>
+
       <section class="py-20 bg-c0-600 overflow-hidden">
         <div class="container mx-auto pb-64">
           <div class="flex flex-wrap justify-center">
@@ -483,33 +566,39 @@
 
     <footer id="footbar"></footer>
 
-    <div class="modal-info fixed top-0 w-full h-screen z-50 bg-c0-600 bg-opacity-50 hidden">
+    <div
+      class="modal-info fixed top-0 w-full h-screen z-50 bg-c0-600 bg-opacity-50 hidden">
       <div class="flex w-full items-center justify-center h-full">
         <div class="w-full max-w-xl mx-auto p-4 md:p-8">
-            <div class="relative p-3 md:p-5 bg-we rounded-lg border border-c0-300 shadow-md">
-              <div class="modal-info-title text-c0-700 text-lg :text-xl font-semibold">
-                  
-              </div>
-              <p class="modal-info-subtitle text-sm md:text-md text-c0-500"></p>
-              <div class="mt-4 main-content mt-4 border border-c0-200 p-2 md:p-4 max-h-[70vh] md:max-h-[60vh] overflow-y-auto rounded-md">
-                <div class="modal-info-content prose prose-sm max-w-none">
-                 
-                </div>
-              </div>
+          <div
+            class="relative p-3 md:p-5 bg-we rounded-lg border border-c0-300 shadow-md">
+            <div
+              class="modal-info-title text-c0-700 text-lg :text-xl font-semibold"></div>
+            <p class="modal-info-subtitle text-sm md:text-md text-c0-500"></p>
+            <div
+              class="mt-4 main-content mt-4 border border-c0-200 p-2 md:p-4 max-h-[70vh] md:max-h-[60vh] overflow-y-auto rounded-md">
+              <div class="modal-info-content prose prose-sm max-w-none"></div>
+            </div>
 
-              
             <div class="absolute top-0 right-0">
               <div class="p-4">
-               <span class="cursor-pointer group modal-info-close">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-c0-400  group-hover:text-c0-600 hover:-rotate-90 duration-300 transform">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-               </span>
-                
+                <span class="cursor-pointer group modal-info-close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-c0-400 group-hover:text-c0-600 hover:-rotate-90 duration-300 transform">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                </span>
               </div>
             </div>
-            </div>
-
+          </div>
         </div>
       </div>
     </div>
