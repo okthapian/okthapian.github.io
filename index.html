@@ -421,67 +421,111 @@
             id="devto-posts"
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
 
-          <script defer>
-            fetch("https://dev.to/api/articles?username=okthapian&t=" + Date.now())
-              .then((res) => res.json())
-              .then((data) => {
+            <script defer>
+              async function fetchPosts() {
+                for (let i = 0; i < 3; i++) {
+                  try {
+                    const res = await fetch(
+                      "https://dev.to/api/articles?username=okthapian&t=" + Date.now(),
+                      { cache: "no-store" }
+                    );
+            
+                    const data = await res.json();
+            
+                    // kalau sudah dapet minimal 3, langsung pakai
+                    if (data.length >= 3) return data;
+            
+                    console.warn("Retry fetch...", i + 1);
+                    await new Promise((r) => setTimeout(r, 500));
+                  } catch (err) {
+                    console.error("Fetch error:", err);
+                  }
+                }
+            
+                return [];
+              }
+            
+              document.addEventListener("DOMContentLoaded", async () => {
                 const container = document.getElementById("devto-posts");
-
-                data.slice(0, 4).forEach((post) => {
-                  const el = document.createElement("div");
-                  const date = new Date(post.edited_at);
-
-                  const formattedDate = date.toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric"
-                  });
-
-                  const tag = post.tag_list[0] || "general";
-
-                  el.className =
-                    "cursor-pointer group relative flex flex-col min-w-0 break-words bg-c1-500 hover:bg-c1-600 border border-we duration-300 shadow-md hover:border-c1-700 w-full mb-6 shadow-lg rounded-lg";
-
-                  el.innerHTML = `
-        ${
-          post.cover_image
-            ? `
-          <img 
-            src="${post.cover_image}" 
-            alt="${post.title}" 
-            class="w-full align-middle rounded-t-lg object-cover h-48"
-          >
-        `
-            : ""
-        }
-
-        <div class=" relative p-6 mb-2">
-          <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" fill="currentColor" class="absolute left-0 w-full block h-[95px] -top-[94px]">
-            <polygon points="-30,95 583,95 583,65" class="text-c1-500 group-hover:text-c1-600 duration-300"></polygon>
-          </svg>
-
-          <div class="flex items-center mb-1">
-              <span class="bg-c1-200 text-c1-600 px-2 py-0.5 rounded-full text-xs">${tag}</span>
-            </div>
-          <h4 class="text-lg font-bold text-c1-100 group-hover:text-we duration-300 leading-snug">
-            <a href="${post.url}" target="_blank" class="hover:underline line-clamp-3">
-              ${post.title}
-              <span class="absolute inset-0"></span>
-            </a>
-          </h4>
-
-          <p class="text-sm font-light mt-2 text-we/80 line-clamp-3">
-            ${post.description || "No description available."}
-          </p>
-
-          <span class="text-xs font-semibold text-c1-200 pt-2">${formattedDate}</span>
-        </div>
-      `;
-
-                  container.appendChild(el);
+            
+                if (!container) {
+                  console.error("Container #devto-posts tidak ditemukan");
+                  return;
+                }
+            
+                container.innerHTML = ""; // reset
+            
+                const data = await fetchPosts();
+            
+                console.log("TOTAL POST:", data.length);
+            
+                data.slice(0, 4).forEach((post, i) => {
+                  try {
+                    const el = document.createElement("div");
+            
+                    // ✅ FIX: fallback date
+                    const date = new Date(post.edited_at || post.published_at);
+            
+                    const formattedDate = isNaN(date)
+                      ? "-"
+                      : date.toLocaleDateString("en-US", {
+                          day: "numeric",
+                          month: "short",
+                          year: "numeric"
+                        });
+            
+                    // ✅ FIX: optional chaining
+                    const tag = post.tag_list?.[0] || "general";
+            
+                    el.className =
+                      "cursor-pointer group relative flex flex-col min-w-0 break-words bg-c1-500 hover:bg-c1-600 border border-we duration-300 shadow-md hover:border-c1-700 w-full mb-6 shadow-lg rounded-lg";
+            
+                    el.innerHTML = `
+                      ${
+                        post.cover_image
+                          ? `
+                          <img 
+                            src="${post.cover_image}" 
+                            alt="${post.title}" 
+                            class="w-full align-middle rounded-t-lg object-cover h-48"
+                          >
+                        `
+                          : ""
+                      }
+            
+                      <div class="relative p-6 mb-2">
+                        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" fill="currentColor" class="absolute left-0 w-full block h-[95px] -top-[94px]">
+                          <polygon points="-30,95 583,95 583,65" class="text-c1-500 group-hover:text-c1-600 duration-300"></polygon>
+                        </svg>
+            
+                        <div class="flex items-center mb-1">
+                          <span class="bg-c1-200 text-c1-600 px-2 py-0.5 rounded-full text-xs">${tag}</span>
+                        </div>
+            
+                        <h4 class="text-lg font-bold text-c1-100 group-hover:text-we duration-300 leading-snug">
+                          <a href="${post.url}" target="_blank" class="hover:underline line-clamp-3">
+                            ${post.title}
+                            <span class="absolute inset-0"></span>
+                          </a>
+                        </h4>
+            
+                        <p class="text-sm font-light mt-2 text-we/80 line-clamp-3">
+                          ${post.description || "No description available."}
+                        </p>
+            
+                        <span class="text-xs font-semibold text-c1-200 pt-2">
+                          ${formattedDate}
+                        </span>
+                      </div>
+                    `;
+            
+                    container.appendChild(el);
+                  } catch (err) {
+                    console.error("Error render post:", post, err);
+                  }
                 });
               });
-          </script>
+            </script>
         </div>
       </section>
 
