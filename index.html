@@ -421,7 +421,7 @@
             id="devto-posts"
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
 
-          <script>
+          <script defer>
             fetch("https://dev.to/api/articles?username=okthapian&t=" + Date.now())
               .then((res) => res.json())
               .then((data) => {
