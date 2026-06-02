@@ -9,8 +9,8 @@
       content="Car Edition by Iqbal Okthapian menampilkan project, konsep, dan solusi digital seputar kebutuhan mobil, otomotif, perawatan kendaraan, aksesoris, dan layanan pendukung mobil." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="index, follow" />
-    <link href="https://okthapian.github.io/car-edition/" rel="canonical" />
-    <link rel="icon" type="image/png" href="../img/logo.png" />
+    <link href="https://okthapian.github.io/car-edition.html" rel="canonical" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
 
     <meta property="og:locale" content="id_ID" />
     <meta property="og:site_name" content="Iqbal Okthapian" />
@@ -19,7 +19,7 @@
       property="og:description"
       content="Project dan konsep digital seputar kebutuhan mobil: katalog layanan, booking, maintenance reminder, aksesoris, dan solusi otomotif." />
     <meta property="og:image" content="https://okthapian.github.io/img/logo.png" />
-    <meta property="og:url" content="https://okthapian.github.io/car-edition/" />
+    <meta property="og:url" content="https://okthapian.github.io/car-edition.html" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Car Edition Project | Iqbal Okthapian" />
@@ -288,13 +288,13 @@
       crossorigin="anonymous"></script>
     <script>
       $(document).ready(function () {
-        $("#navbar").load("../components/navbar.html", function () {
-          $("#navbar a[href='/']").attr("href", "../");
-          $("#navbar img[src='img/logo.png']").attr("src", "../img/logo.png");
-          $("#navbar a[href='#service']").attr("href", "../#service");
-          $("#navbar a[href='#project']").attr("href", "../#project");
+        $("#navbar").load("components/navbar.html", function () {
+          $("#navbar a[href='/']").attr("href", "/");
+          $("#navbar img[src='img/logo.png']").attr("src", "img/logo.png");
+          $("#navbar a[href='#service']").attr("href", "/#service");
+          $("#navbar a[href='#project']").attr("href", "/#project");
         });
-        $("#footbar").load("../components/footbar.html", function () {
+        $("#footbar").load("components/footbar.html", function () {
           $("#footbar a[href='#main']").attr("href", "#main");
         });
 
@@ -307,7 +307,7 @@
         });
 
         let modalInfoData = [];
-        $.getJSON("../dataset/modal-info.json", function (data) {
+        $.getJSON("dataset/modal-info.json", function (data) {
           modalInfoData = data;
         });
 
@@ -322,7 +322,7 @@
           $(".modal-info-title").html(data.title);
           $(".modal-info-subtitle").html(data.subtitle);
           $(".modal-info-content").html('<p class="text-center text-sm text-c0-400">Loading...</p>');
-          $(".modal-info-content").load("../" + data.content, function (response, status) {
+          $(".modal-info-content").load(data.content, function (response, status) {
             if (status === "error") {
               $(".modal-info-content").html('<p class="text-red-500 text-sm">Gagal memuat konten.</p>');
             }
